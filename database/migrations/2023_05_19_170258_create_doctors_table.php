@@ -15,6 +15,10 @@ class CreateDoctorsTable extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
+            $table->integer('department_id');
+            $table->string('name');
+            $table->integer('phone');
+            $table->integer('fee');
             $table->timestamps();
         });
     }
